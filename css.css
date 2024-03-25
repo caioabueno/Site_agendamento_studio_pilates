@@ -3,14 +3,24 @@
     padding: 0;
 }
 
+.information{
+    background-color: #fdfdfd;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    top: -80px;
+    padding: 20px;
+}
+
 .header-title{
     background-color: #fef5e2;
-    height: 250px;
+    height: 300px;
 }
 
 img{
  height: 150px;
  width: 150px;
+ border-radius: 30%;
 
 }
 h1, h2, h3,h4, h5{
@@ -37,6 +47,14 @@ input, select{
     margin-top: 10px;
     font-family: montserrat, sans-serif;
 }
-.teste{
-    box-sizing: content-box 600px;
+.geral,
+.dados_pessoais,
+.data-agendamento
+{
+    margin: 20px;
+}
+.geral,
+.header-title
+{
+    text-align: center;
 }
