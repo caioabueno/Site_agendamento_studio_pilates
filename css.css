@@ -1,4 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header-title{
+    background-color: #fef5e2;
+    height: 250px;
+}
+
 img{
-    height: 200px;
-    width: 200px;
+ height: 150px;
+ width: 150px;
+
+}
+h1, h2, h3,h4, h5{
+    color: #333;
+    font-family: montserrat, sans-serif;
+}
+
+p, label{
+    color: #444;
+    font-family: montserrat, sans-serif;
+}
+
+input, select{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-family: montserrat, sans-serif;
+}
+
+.botao{
+    width: 70px;
+    border-bottom: 1px solid #444;
+    border-radius: 10%;
+    margin-top: 10px;
+    font-family: montserrat, sans-serif;
+}
+.teste{
+    box-sizing: content-box 600px;
 }
