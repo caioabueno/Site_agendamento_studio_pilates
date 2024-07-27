@@ -7,82 +7,65 @@
     <title>Agendamento de aula experimental</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header-title">
-            <h1>Agende sua aula experimental</h1>
-            <img src="img/OIG2.jfif" alt="">
-        </div>
-            <div class="information">
-                <div class="geral">
-                    <h3>Seja muito bem vinda ao Pilates Flow Studio</h3>
-                    <p>Olá! Estamos empolgadas em convidá-la para vivenciar uma jornada única de bem-estar e transformação. No Pilates Flow Studio, entendemos que cada corpo tem sua própria história, ritmo e necessidades. É por isso que estamos oferecendo a você, nossa futura aluna, uma aula experimental gratuita!</p>
-                    <p>Se você está procurando melhorar sua flexibilidade, força e equilíbrio, ou simplesmente quer dedicar um momento do seu dia para cuidar de si mesma em um ambiente acolhedor e inspirador, o Pilates Flow Studio é o seu novo destino.</p>
-                 </div>
-               
+    <header class="header-title">
+        <h1>Agende sua aula experimental</h1>
+        <img src="img/OIG2.jfif" alt="">
+    </header>
+    <main class="container">
+            <aside class="informacoes-gerais">
+                <h3>Seja muito bem vinda ao Pilates Flow Studio</h3>
+                <p>Olá! Estamos empolgadas em convidá-la para vivenciar uma jornada única de bem-estar e transformação. No Pilates Flow Studio, entendemos que cada corpo tem sua própria história, ritmo e necessidades. É por isso que estamos oferecendo a você, nossa futura aluna, uma aula experimental gratuita!</p>
+                <p>Se você está procurando melhorar sua flexibilidade, força e equilíbrio, ou simplesmente quer dedicar um momento do seu dia para cuidar de si mesma em um ambiente acolhedor e inspirador, o Pilates Flow Studio é o seu novo destino.</p>
+            </aside>
             <form id="formCadastro" onsubmit="cadastraUsuario()" > <!--inicio do form-->
-                <!-- dados pessoais nome, telefone e email -->
-                <div class="dados_pessoais">
-                    <h3 class="dados-pessoais-titulo">Dados pessoais</h3>
-                    <label for="nome">Nome completo:<span class="required-field">*</span></label>
-                    <input 
-                    type="text"
-                    name="nome" 
-                    autocomplete="name"
-                    class="block"
-                    placeholder="Digite seu nome completo"
-                    minlength="1"
-                    maxlength="50"
-                    id="nome"
-                    />
-                    <br>
-                    <label for="telefone">Número de Telefone:<span class="required-field">*</span></label>
-                    <input
-                    type="number"
-                    id="telefone"
-                    name="telefone"
-                    autocomplete="tel"
-                    class="block"
-                    placeholder="(  )     -    "
-                    
-                    />
-                    <br>
-                    <label for="email">E-mail:<span class="required-field">*</span></label>
-                    <input
-                    type="email"
-                    name="email" 
-                    autocomplete="email"
-                    class="block"
-                    placeholder="Ex: seuemail@endereco.com"
-                    id="email"
-                    />
-                </div>
-                <div class="data-agendamento">
-                    <!-- escolha da modalidade -->
-                    <h3 class="data-agendamento-titulo">Preencha as formações sobre o agendamento:</h3>
-                    <label for="modalidades" class="data-agendamento-informacoes">Escolha a modalidade de interesse:</label>
-                    <select id="modalidades" name="modalidades"
-                    class="opcoes-modalidades">
-                       <option value="pilates de solo">Pilates de Solo</option>
-                       <option value="pilates clinico">Pilates Clínico</option>
-                       <option value="pilates contemporaneo">Pilates Contemporâneo</option>
-                       <option value="pilates aereo">Pilates Aéreo</option>
-                       <option value="pilates na agua">Pilates na Água</option>
-                       <option value="pilates com acessorios">Pilates com Acessórios</option>
-                     </select>
-                     <br>
-                     <!-- data e hora de agendamento -->
-                     <label for="appointment">Escolha um horário para sua aula:</label>
-
-                     <label for="dataHora">Selecione uma data e hora a partir de hoje:</label>
-                    <input id="dataHora" type="datetime-local" id="dataHora" name="dataHora" min="2024-06-09T00:00" min="09:00" max="17:00">
-
-                     </select>
-                </div>
+                <h3 class="titulo">Dados pessoais</h3>
+                <label for="nome">Nome completo:</span></label>
+                <input 
+                type="text"
+                name="nome" 
+                autocomplete="name"
+                placeholder="Digite seu nome completo"
+                minlength="1"
+                maxlength="50"
+                required
+                id="nome"/>
+                <label for="telefone">Número de Telefone:</label>
+                <input
+                type="number"
+                id="telefone"
+                name="telefone"
+                required
+                autocomplete="tel"
+                placeholder="(  )     -    "/>
+                <label for="email">E-mail:</label>
+                <input
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+                placeholder="Ex: seuemail@endereco.com"
+                id="email"
+                />
+                <!-- escolha da modalidade -->
+                <h3 class="titulo">Preencha as formações sobre o agendamento</h3>
+                <label for="modalidades" class="data-agendamento-informacoes">Escolha a modalidade de interesse:</label>
+                <select id="modalidades" name="modalidades"
+                class="opcoes-modalidades">
+                <option value="pilates de solo">Pilates de Solo</option>
+                <option value="pilates clinico">Pilates Clínico</option>
+                <option value="pilates contemporaneo">Pilates Contemporâneo</option>
+                <option value="pilates aereo">Pilates Aéreo</option>
+                <option value="pilates na agua">Pilates na Água</option>
+                <option value="pilates com acessorios">Pilates com Acessórios</option>
+                </select>
+                <!-- data e hora de agendamento -->
+                <label for="appointment">Escolha um horário para sua aula:</label>
+                <label for="dataHora">Selecione uma data e hora a partir de hoje:</label>
+                <input id="dataHora" type="datetime-local" id="dataHora" name="dataHora" min="2024-06-09T00:00" min="09:00" max="17:00">
+                </select>
                 <input type="submit" class="botao" value="Enviar">                
             </form><!--Fim do form-->
-        </div>
-
-    </div>
+    </main>
     <script src="teste.js"></script>
     <script>
         // Obtém a data e hora atual
