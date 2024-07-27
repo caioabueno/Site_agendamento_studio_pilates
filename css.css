@@ -1,122 +1,130 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: montserrat, sans-serif;
-    color: #444;
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: montserrat, sans-serif;
+color: #444;
 }
 .informacoes-gerais,
 .header-title
 {
-    text-align: center;
-    padding: 10px;
+text-align: center;
+padding: 10px;
 }
 body{
-    background-color: #fff;
+background-color: #fff;
 }
 .header-title{
-    background-color: #f5e5c4;
-    height: 450px;
+background-color: #f5e5c4;
+height: 450px;
 }
 .header-title h1{
-    margin-top: 30px;
+margin-top: 30px;
 }
 
 img{
-    margin-top: 20px;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
+margin-top: 20px;
+height: 150px;
+width: 150px;
+border-radius: 50%;
 }
 
 .container{
-    display: flex;
-    background-color: #fdfdfd;
-    width: 50%;
-    margin: auto;
-    position: relative;
-    top: -180px;
-    padding: 15px;
-    height: 500px;
-    border-radius: 5%;
+display: flex;
+background-color: #fdfdfd;
+width: 50%;
+margin: auto;
+position: relative;
+top: -180px;
+padding: 15px;
+height: 500px;
+border-radius: 5%;
 }
 
 .informacoes-gerais,
 form{
-    width: 50%;
+width: 50%;
 }
 
 .informacoes-gerais{
-    border-right: 1px solid #444;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+border-right: 1px solid #444;
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
 .informacoes-gerais h3{
-    margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 form{
-    border-left: 1px solid #444;
-    padding: 10px;
+border-left: 1px solid #444;
+padding: 10px;
 }
 
 .titulo{
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
+text-align: center;
+margin-bottom: 20px;
+font-weight: bold;
 }
 
 form input, select{
-    display: flex;
-    height: 35px;
-    width: 250px;
-    margin: 5px 0;
+display: flex;
+height: 35px;
+width: 250px;
+margin: 5px 0;
 }
 
 .botao{
-    width: 70px;
-    border-bottom: 1px solid #444;
-    border-radius: 10%;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: .2s;
-    align-self: center;
+width: 70px;
+border-bottom: 1px solid #444;
+border-radius: 10%;
+margin-top: 10px;
+cursor: pointer;
+transition: .2s;
 }
 
 
 .botao:hover{
-    box-shadow: 0px 0px 10px #f0c46e;
-    transform: scale(1.05);
-    background-color: #f0c46e;
-    
+box-shadow: 0px 0px 10px #f0c46e;
+transform: scale(1.05);
+background-color: #f0c46e;
+
 }
 
+/* Adicionando o media query para max-width: 480px */
+@media (max-width: 480px) {
+    .header-title {
+        height: auto;
+    }
 
+    .container {
+        flex-direction: column;
+        width: 100%;
+        top: 0;
+        padding: 10px;
+        height: auto;
+    }
 
+    .informacoes-gerais,
+    form {
+        width: 100%;
+        border: none;
+        padding: 10px 0;
+    }
 
+    img {
+        height: 100px;
+        width: 100px;
+    }
 
+    form input,
+    select {
+        width: 100%;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .botao {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
