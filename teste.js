@@ -52,76 +52,142 @@ function cadastraUsuario(event) {
 // Adiciona um event listener para o evento de envio do formulário
 document.getElementById("formCadastro").addEventListener("submit", cadastraUsuario);
 
-
+$(document).ready(function(){
+  $('#carousel-imagens').slick({
+      autoplay:true
+  });
+  $('.menu-hamburguer').click(function() {
+      $('nav').slideToggle();
+  })
+  $('#telefone').mask('(00) 00000-0000')
+  $('form').validate({
+      rules:{
+          nome: {
+              required: true
+          },
+          email: {
+              required: true,
+              email: true
+          },
+          telefone: {
+              required: true
+          },
+          mensagem: {
+              required: true
+          },
+          veiculoInteresse: {
+              required: false
+          }
+      },
+      messages: {
+          nome: 'Por favor, insira seu nome',
+          email: 'Esse campo é obrigatório',
+          telefone: 'Esse campo é obrigatório',
+          mensagem: 'Esse campo é obrigatório'
+      },
+      submitHandler: function(form){
+          console.log(form)
+      },
+      invalidHandler: function(evento, validador){
+          let camposIncorretos = validador.numberOfInvalids();
+          if (camposIncorretos) {
+              alert(`Existem ${camposIncorretos} campos incorretos`)
+          }
+      }
+  })
+})
 
 
 //http://localhost/GetClientes
 
-// faz get 
+        // Definir data mínima para o agendamento
+        let agora = new Date();
+        let dataHoraAtual = agora.toISOString().slice(0, 16);
+        document.getElementById("dataHora").setAttribute("min", dataHoraAtual);
 
-// Esta função faz uma requisição GET para uma URL.
-function fazGet(url) {
-  // Faz uma requisição GET usando a API fetch do JavaScript.
-  fetch(url)
-    // Trata a resposta da requisição.
-    .then(response => response.json()) // Converte a resposta para JSON.
-    .then(data => {
-      console.log(data); // Exibe os dados da resposta no console.
-      exibeTabela(data); // Chama a função para exibir os dados em uma tabela.
-    })
-    .catch(error => console.error("Erro:", error)); // Trata erros da requisição.
-}
 
-// Esta função cria e exibe uma tabela com os dados fornecidos.
-function exibeTabela(dados) {
-  // Obtém o elemento onde a tabela será inserida.
-  const tabelaContainer = document.getElementById("tabelaClientes");
-  
-  // Cria o elemento da tabela.
-  let tabela = document.createElement("table");
-  
-  // Cria o cabeçalho da tabela.
-  let thead = document.createElement("thead");
-  let headerRow = document.createElement("tr");
-  let headers = ["Nome", "Telefone", "Email"]; // Ajuste os cabeçalhos conforme necessário.
-  
-  headers.forEach(headerText => {
-    let th = document.createElement("th");
-    th.appendChild(document.createTextNode(headerText));
-    headerRow.appendChild(th);
-  });
-  thead.appendChild(headerRow);
-  tabela.appendChild(thead);
-  
-  // Cria o corpo da tabela.
-  let tbody = document.createElement("tbody");
-  dados.forEach(item => {
-    let row = document.createElement("tr");
-    
-    // Ajuste os campos conforme a estrutura dos seus dados.
-    let nomeCell = document.createElement("td");
-    nomeCell.appendChild(document.createTextNode(item.nome));
-    row.appendChild(nomeCell);
+        $(document).ready(function(){
+          // Slick Carousel
+          $('#carousel-imagens').slick({
+              infinite: true,
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              autoplay: true,
+              autoplaySpeed: 3000,
+              responsive: [
+                  {
+                      breakpoint: 1024, // Para telas até 1024px (tablets)
+                      settings: {
+                          slidesToShow: 2, // Exibe 2 imagens
+                          slidesToScroll: 2
+                      }
+                  },
+                  {
+                      breakpoint: 768, // Para telas até 768px (smartphones em paisagem)
+                      settings: {
+                          slidesToShow: 1, // Exibe 1 imagem
+                          slidesToScroll: 1
+                      }
+                  },
+                  {
+                      breakpoint: 480, // Para telas até 480px (smartphones pequenos)
+                      settings: {
+                          slidesToShow: 1, // Exibe 1 imagem
+                          slidesToScroll: 1
+                      }
+                  }
+              ]
+          });
+          // Slick Carousel
 
-    let telefoneCell = document.createElement("td");
-    telefoneCell.appendChild(document.createTextNode(item.telefone));
-    row.appendChild(telefoneCell);
+          // Máscara de telefone
+          $('#telefone').mask('(00) 00000-0000');
+          // Validação do formulário
+          $('form').validate({
+              rules: {
+                  nome: { required: true },
+                  email: { required: true, email: true },
+                  telefone: { required: true }
+              },
+              messages: {
+                  nome: 'Por favor, insira seu nome',
+                  email: 'Esse campo é obrigatório',
+                  telefone: 'Esse campo é obrigatório'
+              },
+              submitHandler: function(form){
+                  console.log(form);
+              },
+              invalidHandler: function(evento, validador){
+                  let camposIncorretos = validador.numberOfInvalids();
+                  if (camposIncorretos) {
+                      alert(`Existem ${camposIncorretos} campos incorretos`);
+                  }
+              }
+          });
+      });
 
-    let emailCell = document.createElement("td");
-    emailCell.appendChild(document.createTextNode(item.email));
-    row.appendChild(emailCell);
-    
-    tbody.appendChild(row);
-  });
-  tabela.appendChild(tbody);
-  
-  // Insere a tabela no container.
-  tabelaContainer.innerHTML = ""; // Limpa o conteúdo anterior.
-  tabelaContainer.appendChild(tabela);
-}
-
-// Adiciona um event listener para carregar os dados ao carregar a página.
-document.addEventListener("DOMContentLoaded", function() {
-  let url = "http://localhost/GetClientes"; // URL da API
-  fazGet(url);
-});
+            // Máscara de telefone
+            $('#telefone').mask('(00) 00000-0000');
+            // Validação do formulário
+            $('form').validate({
+                rules: {
+                    nome: { required: true },
+                    email: { required: true, email: true },
+                    telefone: { required: true }
+                },
+                messages: {
+                    nome: 'Por favor, insira seu nome',
+                    email: 'Esse campo é obrigatório',
+                    telefone: 'Esse campo é obrigatório'
+                },
+                submitHandler: function(form){
+                    console.log(form);
+                },
+                invalidHandler: function(evento, validador){
+                    let camposIncorretos = validador.numberOfInvalids();
+                    if (camposIncorretos) {
+                        alert(`Existem ${camposIncorretos} campos incorretos`);
+                    }
+                }
+            });
+        });
