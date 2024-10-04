@@ -3,182 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.css">
+    <title>NC Fisiostudio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Slick Carousel CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     
-    <title>NC Fisiostudio</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
+    <!-- Header com Navbar do Bootstrap -->
     <header>
-        <div class="container container-flex">
-            <h1>NC Fisiostudio</h1>
-            <img src="img/logo_nc_fisiostudio2.png" alt="">
-        </div>
-        <nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Modalidades</a></li>
-                    <li><a href="#">Agendamento</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Localização</a></li>
-                </ul>
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="img/logo_nc_fisiostudio2.png" alt="Logo do NC Fisiostudio" width="40" class="me-2">
+                    <span>NC Fisiostudio</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#modalidades">Modalidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#agendamento">Agendamento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#localizacao">Localização</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     
-    <!-- Carousel de Imagens -->
-    <div id="carousel-imagens" class="">
-        <img src="img/carrossel1.png" alt="Imagem 1">
-        <img src="img/carrossel4.png" alt="Imagem 4">
-        <img src="img/carrossel2.jpg" alt="Imagem 2">
-        <img src="img/carrossel3.png" alt="Imagem 3">
-    </div>
-    
-    <main>
-        <div class="container sobre-nos">
-            <img src="img/sobre_nos.jpg" alt="Sobre nós - NC Fisiostudio">
-            <div class="texto-sobre">
-                <h2>Sobre Nós - NC Fisiostudio</h2>
-                <h3>Nossa História</h3>
-                <p>
-                    O Estúdio NC Fisiostudio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas repudiandae libero dignissimos error!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam voluptatum cumque suscipit voluptatibus.
-                </p>
+    <!-- Carousel de Imagens com Slick Carousel dentro de um container Bootstrap -->
+    <section aria-label="Carrossel de Imagens" class="my-4">
+        <div class="container">
+            <div id="carousel-imagens" class="slick-carousel">
+                <div><img src="img/carrossel1.png" alt="Imagem de Pilates" class="img-fluid"></div>
+                <div><img src="img/carrossel4.png" alt="Imagem de Fisioterapia" class="img-fluid"></div>
+                <div><img src="img/carrossel2.jpg" alt="Imagem de Massagem" class="img-fluid"></div>
+                <div><img src="img/carrossel3.png" alt="Imagem de Relaxamento" class="img-fluid"></div>
             </div>
         </div>
-    </main>
-        <!-- Modalidades -->
-        <section>
+    </section>
+    
+    <!-- Sobre Nós -->
+    <main>
+        <section id="sobre" class="py-5 bg-light">
             <div class="container">
-                <h2>Modalidades</h2>
-                <ul class="modalidades container-flex">
-                    <li>
-                        <h3>Pilates</h3>
-                        <img src="img/pilates.jpeg" alt="Pilates">
-                        <p>Enfoque em posturas básicas e técnicas de respiração. Ideal para iniciantes e para melhorar a flexibilidade e força.</p>
-                    </li>
-                    <li>
-                        <h3>Fisioterapia</h3>
-                        <img src="img/fisioterapia.jpeg" alt="Fisioterapia">
-                        <p>Combinação de posturas, respiração, mantras e meditação. Focado em despertar a energia interior e aumentar a consciência espiritual.</p>
-                    </li>
-                    <li>
-                        <h3>Massagem</h3>
-                        <img src="img/yoga-avançado.jpg" alt="Massagem">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aspernatur ipsum esse recusandae alias.</p>
-                    </li>
-                </ul>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/sobre_nos.jpg" alt="Sobre nós - NC Fisiostudio" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Sobre Nós</h2>
+                        <h3>Nossa História</h3>
+                        <p>
+                            O Estúdio NC Fisiostudio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas repudiandae libero dignissimos error!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam voluptatum cumque suscipit voluptatibus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modalidades -->
+        <section id="modalidades" class="py-5">
+            <div class="container">
+                <h2 class="mb-4 text-center">Modalidades</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="img/pilates.jpeg" class="card-img-top" alt="Pilates">
+                            <div class="card-body">
+                                <h5 class="card-title">Pilates</h5>
+                                <p class="card-text">Enfoque em posturas básicas e técnicas de respiração. Ideal para iniciantes e para melhorar a flexibilidade e força.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="img/fisioterapia.jpeg" class="card-img-top" alt="Fisioterapia">
+                            <div class="card-body">
+                                <h5 class="card-title">Fisioterapia</h5>
+                                <p class="card-text">Combinação de posturas, respiração, mantras e meditação. Focado em despertar a energia interior e aumentar a consciência espiritual.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="img/massagem.jpg" class="card-img-top" alt="Massagem">
+                            <div class="card-body">
+                                <h5 class="card-title">Massagem</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aspernatur ipsum esse recusandae alias.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         
         <!-- Formulário de Agendamento -->
-        <section>
-            <div class="container form-agendamento">
-                <h3>Agende sua aula experimental</h3>
-                <form id="formCadastro" onsubmit="cadastraUsuario()">
-                    <h3 class="titulo">Dados pessoais</h3>
-                    <label for="nome">Nome completo:</label>
-                    <input 
-                    type="text"
-                    name="nome" 
-                    autocomplete="name"
-                    placeholder="Digite seu nome completo"
-                    minlength="1"
-                    maxlength="50"
-                    required
-                    id="nome"/>
-                    
-                    <label for="telefone">Número de Telefone:</label>
-                    <input
-                    type="text"
-                    id="telefone"
-                    name="telefone"
-                    required
-                    autocomplete="tel"
-                    placeholder="(00) 00000-0000"/>
-                    
-                    <label for="email">E-mail:</label>
-                    <input
-                    type="email"
-                    name="email"
-                    required
-                    autocomplete="email"
-                    placeholder="Ex: seuemail@endereco.com"
-                    id="email"/>
-                    
-                    <!-- Escolha da Modalidade -->
-                    <h3 class="titulo">Preencha as informações sobre o agendamento</h3>
-                    <label for="modalidades">Escolha a modalidade de interesse:</label>
-                    <select id="modalidades" name="modalidades">
-                    <option value="pilates de solo">Pilates de Solo</option>
-                    <option value="pilates clinico">Pilates Clínico</option>
-                    <option value="pilates contemporaneo">Pilates Contemporâneo</option>
-                    <option value="pilates aereo">Pilates Aéreo</option>
-                    <option value="pilates na agua">Pilates na Água</option>
-                    <option value="pilates com acessorios">Pilates com Acessórios</option>
-                </select>
-
-                <!-- Data e Hora de Agendamento -->
-                <label for="dataHora">Escolha um horário para sua aula:</label>
-                <input id="dataHora" type="datetime-local" name="dataHora" min="2024-06-09T00:00">
-
-                <input type="submit" class="botao" value="Enviar">                
-            </form>
+        <section id="agendamento" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="mb-4 text-center">Agende sua aula experimental</h2>
+                <form id="formCadastro" onsubmit="cadastraUsuario()" novalidate>
+                    <div class="row">
+                        <!-- Dados Pessoais -->
+                        <div class="col-md-6 mb-4">
+                            <h4>Dados Pessoais</h4>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome completo:</label>
+                                <input 
+                                    type="text"
+                                    class="form-control"
+                                    name="nome" 
+                                    autocomplete="name"
+                                    placeholder="Digite seu nome completo"
+                                    minlength="1"
+                                    maxlength="50"
+                                    required
+                                    id="nome"/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label">Número de Telefone:</label>
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    id="telefone"
+                                    name="telefone"
+                                    required
+                                    autocomplete="tel"
+                                    placeholder="(00) 00000-0000"/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail:</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    name="email"
+                                    required
+                                    autocomplete="email"
+                                    placeholder="Ex: seuemail@endereco.com"
+                                    id="email"/>
+                            </div>
+                        </div>
+                        <!-- Informações sobre o Agendamento -->
+                        <div class="col-md-6 mb-4">
+                            <h4>Informações sobre o Agendamento</h4>
+                            <div class="mb-3">
+                                <label for="modalidades" class="form-label">Escolha a modalidade de interesse:</label>
+                                <select id="modalidades" name="modalidades" class="form-select" required>
+                                    <option value="">Selecione uma modalidade</option>
+                                    <option value="pilates">Pilates</option>
+                                    <option value="Fisioterapia">Fisioterapia</option>
+                                    <option value="Massagem">Massagem</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dataHora" class="form-label">Escolha um horário para sua aula:</label>
+                                <input id="dataHora" type="datetime-local" name="dataHora" class="form-control" min="2024-06-09T00:00" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        
+    </main>
+    <!-- Localização (Mapa ou Informações Adicionais) -->
+    <section id="localizacao" class="py-5">
+        <div class="container">
+            <h2 class="mb-4 text-center">Localização</h2>
+            <!-- Integre um mapa do Google Maps ou informações adicionais de localização aqui -->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!..." 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div>
         </div>
     </section>
 
+<!-- Footer -->
+<footer id="contato" class="py-4 bg-dark text-white">
+    <div class="container text-center">
+        <p>&copy; 2024 NC Fisiostudio. Todos os direitos reservados.</p>
+        <!-- Você pode adicionar links de redes sociais ou informações de contato aqui -->
+    </div>
+</footer>
     <!-- Scripts -->
-    <script src="teste.js"></script>
+    <!-- jQuery primeiro, depois Popper.js e Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugins de Máscara e Validação -->
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/messages_pt_BR.min.js"></script>
+    
+    <!-- Scripts Personalizados -->
+    <script src="teste.js"></script>
 
-
-    <script>
-        $(document).ready(function(){
-            // Slick Carousel
-            $('#carousel-imagens').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                responsive: [
-                    {
-                        breakpoint: 1024, // Para telas até 1024px (tablets)
-                        settings: {
-                            slidesToShow: 2, // Exibe 2 imagens
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 768, // Para telas até 768px (smartphones em paisagem)
-                        settings: {
-                            slidesToShow: 1, // Exibe 1 imagem
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 480, // Para telas até 480px (smartphones pequenos)
-                        settings: {
-                            slidesToShow: 1, // Exibe 1 imagem
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        });
-            // Slick Carousel
-
-    </script>
 </body>
 </html>
+

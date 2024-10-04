@@ -190,4 +190,3 @@ $(document).ready(function(){
                     }
                 }
             });
-        });
