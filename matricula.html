@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC Fisiostudio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="./lib/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- Script menu -->
+    <script src="./script.js" defer></script>
+</head>
+
+<body onload="carregaNav()">
+    <!-- Header com Navbar do Bootstrap -->
+    <header>
+        <div id="menu_js"></div>
+    </header>
+    <h1 style="text-align: center;">Cadastro de Alunos</h1>
+
+    <section class="container-fluid">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Formulário para cadastrar aluno -->
+                            <form class="row" id="matriculaForm">
+                                <div class="col-md-6">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" id="nome" name="nome" placeholder="Escreva seu nome completo" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="email">Email</label>
+                                    <input type="text" id="email" name="email" placeholder="Ex: seuemail@provedor.com.br" required>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" id="cpf" name="cpf" placeholder="Ex: 123.123.234-11" required>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <label for="genero">Gênero</label>
+                                    <input type="text" id="genero" name="genero" placeholder="Selecione" required>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <label for="data_nascimento">Data de nascimento</label>
+                                <input type="text" id="data_nascimento" name="data_nascimento" placeholder="Dia/mês/ano" required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="telefone_principal">Telefone principal</label>
+                                    <input type="text" id="telefone_principal" name="telefone_principal" placeholder="Ex: (11) 9 8765-4321" required>                                
+                                </div>
+
+                                <div class="col-md-6">                                
+                                    <label for="telefone_secundario">Telefone secundário (opcional)</label>
+                                    <input type="text" id="telefone_secundario" name="telefone_secundario" placeholder="Ex: (11) 9 8765-4321">
+                                </div>
+
+                                <div class="col-md-9">
+                                    <label for="logradouro">Endereço</label>
+                                    <input type="text" id="logradouro" name="logradouro" placeholder="Ex: Avenida Nossa senhora do Sabará" required>                                
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="numero">Número</label>
+                                    <input type="text" id="numero" name="numero" placeholder="123" required>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <label for="bairro">Bairro</label>
+                                    <input type="text" id="bairro" name="bairro" placeholder="Ex: Vila Santana" required>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <label for="cidade">Cidade</label>
+                                    <input type="text" id="cidade" name="cidade" placeholder="São Paulo" required>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label for="estado">Estado</label>
+                                    <input type="text" id="bairro" name="bairro" placeholder="UF" required>
+                                </div>
+                                
+                                <div class="col-md-8">
+                                    <button type="submit" class="btn btn-secondary btn-lg">Cadastrar e agendar uma aula teste</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <!--<script src=" alunoCRUD.js"></script>-->
+    <script src="./service/cliente-service.js"></script>
+</body>

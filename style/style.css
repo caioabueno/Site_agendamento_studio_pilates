@@ -1,0 +1,291 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat, sans-serif;
+    color: #444;
+}
+html{
+    overflow-x: hidden;
+}
+
+header, footer{
+    background-color: #e5cffa;
+    padding-top: 16px;
+    color: #fff;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+header > .container,
+footer > .container{
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container-flex{
+    display: flex;
+}
+header img{
+    max-width: 140px;
+}
+nav {
+    background-color: #f5e5c4;
+    padding: 16px 0;
+    display: none;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a {
+    color: #444;
+    text-decoration: none;
+}
+/* fim header */
+
+/* barra de navegação */
+.menu-hamburguer{
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu-hamburguer span{
+    height: 2px;
+    width: 100%;
+    background-color: #444;
+    display: block;
+    margin-bottom: 4px;
+}
+/* carrossel */
+#carousel-imagens {
+    max-width: 100%; /* O carrossel pode se expandir no máximo até a largura da tela */
+    max-height: 500px; /* Defina a altura máxima do carrossel */
+    width: 100%; /* O carrossel ocupará 100% da largura disponível */
+    margin: 0 auto; /* Centraliza o carrossel na página */
+    overflow: hidden; /* Garante que o conteúdo extra não apareça */
+}
+
+#carousel-imagens img {
+    width: 100%; /* As imagens se ajustam automaticamente à largura do carrossel */
+    height: 500px; /* Mantém a proporção das imagens */
+    object-fit: cover; /* Ajusta as imagens para cobrir o espaço sem distorcer */
+}
+/*sobre nós */
+/* Estilo do Main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 100vh; /* Faz o main ocupar toda a altura da tela */
+}
+
+.container.sobre-nos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre-nos img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.texto-sobre h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.texto-sobre h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.texto-sobre p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* fim sobre nós */
+
+
+
+/* modalidades */
+.modalidades{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.modalidades img{
+    max-width: 100%;
+}
+
+.modalidades li{
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+
+.modalidades li h3{
+    margin: 16px 0;
+}
+
+/* modalidades fim */
+/* botão */
+.botao{
+width: 70px;
+border-bottom: 1px solid #444;
+border-radius: 10%;
+margin-top: 10px;
+cursor: pointer;
+transition: .2s;
+}
+
+
+.botao:hover{
+box-shadow: 0px 0px 10px #f0c46e;
+transform: scale(1.05);
+background-color: #f0c46e;
+
+}
+/* formulario de agendamento */
+.form-agendamento {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos do formulário */
+.container h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Labels */
+.container label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Inputs e Select */
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="number"],
+.container input[type="datetime-local"],
+.container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Placeholder e Focus */
+.container input::placeholder {
+    color: #999;
+}
+
+.container input:focus,
+.container select:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
+/* Botão de envio */
+.container .botao {
+    width: 100%;
+    padding: 12px;
+    background-color: #444;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container .botao:hover {
+    background-color: #333;
+}
+/* fim formulario de agendamento  */
+
+/* Adicionando o media query para max-width: 480px */
+@media (max-width: 480px) {
+    .header-title {
+        height: auto;
+    }
+    
+    .container {
+        flex-direction: column;
+        width: 100%;
+        top: 0;
+        padding: 10px;
+        height: auto;
+    }
+
+    .informacoes-gerais,
+    form {
+        width: 100%;
+        border: none;
+        padding: 10px 0;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    form input,
+    select {
+        width: 100%;
+    }
+
+    .botao {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 3px;
+    }
+}
+/* https://studiowenzelpilates.com.br/?gad_source=1&gclid=CjwKCAjw8rW2BhAgEiwAoRO5rExkqTryxBI_X772Eqy64l7i0q0zZlYk4KCmvQUyjedtrd0blzoszBoCTewQAvD_BwE */
+
+
+
+/* Branco Neve (#F8F9FA): Um tom quase branco, muito suave e neutro, que fará com que as cores rosa e verde se destaquem sem criar um contraste muito forte.
+
+Creme (#F5F5DC): Um tom de bege claro que adiciona um toque de calor sem competir com as cores principais.
+
+Cinza Claro (#E0E0E0): Um cinza muito claro pode criar uma sensação de sofisticação e modernidade, mantendo um contraste suave com as cores principais.
+
+Azul Claro (#E0F7FA): Um azul muito claro pode proporcionar um contraste fresco e leve, e também combina bem com a paleta de cores naturais.
+
+Lavanda (#E6E6FA): Um tom suave de lavanda pode adicionar um toque de cor que é leve e complementar tanto o rosa quanto o verde.
+
+Bege Claro (#FAF3E0): Um tom de bege claro pode trazer uma sensação acolhedora e complementar os tons de rosa e verde de maneira harmoniosa.

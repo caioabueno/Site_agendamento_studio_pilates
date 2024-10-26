@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NC Fisiostudio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="./lib/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style/style.css">
+
+  <!-- Script menu -->
+  <script src="./script.js" defer></script>
+</head>
+
+<body onload="carregaNav()">
+  <!-- Header com Navbar do Bootstrap -->
+  <header>
+    <div id="menu_js"></div>
+  </header>
+  <h1 style="text-align: center;">Alunos matriculados</h1>
+
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Numero de registro</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>CPF</th>
+        <th>Telefone 1</th>
+        <th>Telefone 2</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody data-tabela>
+     
+    </tbody>
+  </table>
+
+
+
+  <script src="./lib/bootstrap.bundle.min.js"></script>
+  
+  <script src="./service/cliente-service.js"></script>
+</body>
